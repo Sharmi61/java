@@ -1,0 +1,28 @@
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public int allDigitsCount(int input1){
+		// Read only region end
+		// Write code here...
+		int n=input1,count=1;
+		
+		if(input1>=1&&input1<=25000){
+			if(input1<=9){count=1;}else{
+	while(input1!=0)
+	{
+		input1=input1/10;
+		count++;
+		if(input1<=9)
+			break;
+		}}
+		
+	}return count;}
+  public static void main(String args[])
+  {UserMainCode u=new UserMainCode();
+  u.allDigitsCount(190);
+  }
+}
