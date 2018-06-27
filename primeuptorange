@@ -1,0 +1,26 @@
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public int countPrimesInRange(int input1,int input2){
+		// Read only region end
+		// Write code here...
+		int i=2,j=2,count=0;
+	for(i=input1;i<=input2;i++){
+		for(j=2;j<=i-1;j++)
+		{
+			if(i%j==0)
+				break;
+		}if(i==j)
+			count++;
+	}return count;
+		
+	}
+  public static void main(String args[])
+  {UserMainCode u=new UserMainCode();
+ System.out.println(u.countPrimesInRange(2,20);
+  }
+}
