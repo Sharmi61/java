@@ -1,0 +1,24 @@
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public int OddDigitsSum(int input1){
+		// Read only region end
+		// Write code here...
+		int sum=0,n=input1,r=0;
+		
+		
+			sum=0;
+			while(n>0){
+				r=n%10;
+				if(r%2!=0)
+				{sum=sum+r;}
+				n=n/10;
+			}n=sum;
+		
+	return sum;	
+	}
+}
