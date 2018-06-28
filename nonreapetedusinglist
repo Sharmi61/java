@@ -1,0 +1,30 @@
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public int nonRepeatDigitsCount(int input1){
+		// Read only region end
+		ArrayList<Integer> al=new ArrayList<Integer>();
+		ArrayList<Integer> al1=new ArrayList<Integer>();
+		String s=Integer.toString(input1);
+		int i=0,count=0;
+		int a[]=new int[s.length()];
+		for(i=0;i<s.length();i++){
+			a[i]=Integer.parseInt(Character.toString(s.charAt(i)));
+		}
+		for(i=0;i<a.length;i++){
+			al.add(a[i]);
+		}
+		for(i=0;i<al.size();i++){
+			al1.add(Collections.frequency(al,al.get(i)));
+			}
+		for(i=0;i<al1.size();i++){
+			if(al1.get(i)==1){count++;}
+		}
+		
+		return count;
+	}
+}
