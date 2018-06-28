@@ -1,0 +1,6 @@
+String s=Integer.toString(input1);
+	StringBuilder sb=new StringBuilder(s);
+	String s2=sb.reverse();
+	if(s.equals(s2)){
+		return 2;
+	}else{return 1;}
