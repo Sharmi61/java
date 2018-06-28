@@ -1,0 +1,27 @@
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public int EvenDigitsSum(int input1){
+		// Read only region end
+		// Write code here...
+		int i=0,r=0,sum=0,n=input1;
+		if(input1>=1&&input1<=9)
+		{if(input1%2==0)
+		return input1;
+		else{return 0;}}
+		else
+		{do{
+			while(n>0){
+				r=n%10;
+				if(r%2==0)
+				{sum=sum+r;}
+				n=n/10;
+			}n=sum;
+		}while(sum>9);
+		return sum;}
+	
+}}
