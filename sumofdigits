@@ -1,0 +1,24 @@
+class UserMainCode
+{
+
+	public int digitSum(int input1){
+		// Read only region end
+		// Write code here...
+		int ne=(input1>=0)?0:1;
+		input1=(input1>=0)?input1:(-1*input1);
+		
+		int r=0,n=input1,sum=0;
+		do{sum=0;
+			while(n>0){
+			r=n%10;
+			sum=sum+r;
+			n=n/10;
+			
+		}n=sum;}while(sum>9);
+		if(ne==1){
+			sum=sum*(-1);
+		}
+		
+	return sum;	
+	}
+}
