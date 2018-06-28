@@ -1,0 +1,16 @@
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public String secondWordUpperCase(String input1){
+		// Read only region end
+	 String[] s=input1.split(" ");
+		if(s.length>1)
+		{return(s[1].toUpperCase()); }
+		else{return  "LESS";}
+		
+	}
+}
