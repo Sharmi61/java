@@ -1,0 +1,32 @@
+port java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public int weightOfString(String input1,int input2){
+		// Read only region end
+		// Write code here...
+		char[] c=input1.toCharArray();
+		int i=0,ascii=0,sum=0;
+		for(i=0;i<c.length;i++){
+			c[i]=Character.toUpperCase(c[i]);
+		}
+		if(input2==1){
+		for(i=0;i<c.length;i++){
+			if(Character.isLetter(c[i])){
+				ascii=(int)c[i];
+				sum=sum+ascii-64;
+			}
+		}}
+		else{for(i=0;i<c.length;i++){
+			if(Character.isLetter(c[i])&&c[i]!='A'&&c[i]!='E'&&c[i]!='I'&&c[i]!='O'&&c[i]!='U'){
+				ascii=(int)c[i];
+				sum=sum+ascii-64;
+			}
+		}}
+		
+		return sum;
+	}
+}
