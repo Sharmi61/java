@@ -1,0 +1,23 @@
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public int getCodeThroughStrings(String input1){
+		// Read only region end
+		// Write code here...
+		int len=0;int r=0;
+		String[] s=input1.split(" ");
+		for(int i=0;i<s.length;i++){
+		len+=s[i].length();
+		}while(len>10){
+		r=len%10;
+			r+=len/10;
+			
+			len=r;
+		}
+		return r;
+	}
+}
