@@ -1,0 +1,45 @@
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public int findStringCode(String input1){
+		// Read only region end
+		// Write code here..
+		input1=input1.toUpperCase();
+	   String[] s=input1.split(" ");
+		String ss="";int x=0;int r=0;
+		for(int i=0;i<s.length;i++){
+			 r=0;
+			char[] c=s[i].toCharArray();
+			if(c.length%2==0){
+				for(int j=0;j<c.length/2;j++)
+				{
+					int f=(int)c[j]-64;
+					int l=(int)c[c.length-1-j]-64;
+					int y=f-l;
+					if(y<0)y=y*(-1);
+					r+=y;
+				}}else{
+					for(int j=0;j<c.length;j++){
+						if(j<c.length/2)
+						{	int f=(int)c[j]-64;
+					int l=(int)c[c.length-1-j]-64;
+						 int y=f-l;
+					if(y<0)y=y*(-1);
+					r+=y;}else{
+						r=r+((int)c[j]-64);
+						break;}
+					}
+				}String q=Integer.toString(r);
+			ss=ss+q;
+		}x=Integer.parseInt(ss);
+		return x;
+	}
+}
+/*world wide web output:w-d=18 o-l=3 r=19 18+3+19=40
+wide=26
+web=23
+402326*/
