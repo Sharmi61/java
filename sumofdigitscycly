@@ -1,0 +1,26 @@
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public int sumOfSumsOfDigits(int input1){
+		// Read only region end
+		// Write code here...
+		int sum=0;
+		String s=Integer.toString(input1);
+		int a[]=new int[s.length()];
+		for(int i=0;i<s.length();i++)
+			a[i]=Integer.parseInt(Character.toString(s.charAt(i)));
+		for(int i=0;i<s.length();i++)
+		{
+			for(int j=i;j<s.length();j++)
+			{ 
+			sum+=a[j];
+			}
+		}return sum;
+	}
+}
+/*58723=(5+8+7+2+3)+(8+7+2+3)+(7+2+3)+(2+3)+(3)
+=65 */
