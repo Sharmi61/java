@@ -1,0 +1,47 @@
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public class Result{
+		public final int output1;
+		public final int output2;
+
+		public Result(int out1, int out2){
+			output1 = out1;
+			output2 = out2;
+		}
+	}
+	
+    public Result decreasingSeq(int[] input1,int input2){
+    	// Read only region end
+        //Write code here...
+		int o1=0,o2=0,dr=0;
+		ArrayList<Integer> al=new ArrayList<Integer>();
+		if(input2==0||input2==1)
+		{o1=0;o2=0;}
+		else
+		{
+			for(int i=0;i<input2-1;i++)
+			
+			{if(input1[i]>input1[i+1])
+					dr=dr+1;
+
+				else {if(dr!=0)
+					al.add(dr+1);
+					  dr=0;
+					
+				}if((i==input2-2)&&(dr!=0))
+					al.add(dr+1);
+			}
+		o1=al.size();
+		o2=Collections.max(al);}
+        Result r=new Result(o1,o2);
+		return r;
+    }
+}
+/*{11,3,1,4,7,8,12,4,3,1}
+number of decreasing sequence in array=2
+longest decreasing sequene =4*/
