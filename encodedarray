@@ -1,0 +1,44 @@
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public class Result{
+		public final int output1;
+		public final int output2;
+
+		public Result(int out1, int out2){
+			output1 = out1;
+			output2 = out2;
+		}
+	}
+	
+    public Result findOriginalFirstAndSum(int[] input1,int input2){
+    	// Read only region end
+        //Write code here...
+		int[] ra=new int[input2];
+		for(int i=input2-1;i>=0;i--)
+		{
+			if(i==input2-1)
+				ra[i]=input1[i];
+			else if(i==input2-2)
+				ra[i]=input1[i]-input1[i+1];
+			else if(i<input2-2)
+				ra[i]=input1[i]-ra[i+1];
+			
+		}int sum=0;
+		for(int i=0;i<ra.length;i++){
+			sum+=ra[i];
+		}
+		
+		int o1=ra[0];
+		Result r=new Result(o1,sum);
+        return r;
+    }
+}
+/*enodedarray={7,6,8,16,12,3}
+originalarray={2,3,1,7,9,3}
+result is first number of array=2
+and sum of original array=27*/
