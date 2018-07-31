@@ -1,0 +1,88 @@
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public String userIdGeneration(String input1,String input2,int input3,int input4){
+		// Read only region end
+		// Write code here...
+	String s="";
+		String in1=new String(input1);
+		String in2=new String(input2);
+	if(input1.length()<input2.length())	
+	{
+		char s1=input1.charAt(0);
+		if(Character.isUpperCase(s1))
+			s1=Character.toLowerCase(s1);
+		else
+		{s1=Character.toUpperCase(s1);}
+		s=s+Character.toString(s1);
+		for(int i=0;i<input2.length();i++){
+			char s2=input2.charAt(i);
+			if(Character.isUpperCase(s2))
+			s2=Character.toLowerCase(s2);
+		else
+		{s2=Character.toUpperCase(s2);}
+			s=s+Character.toString(s2);
+		}
+	}
+		else if(input1.length()>input2.length())	
+	{
+		char s1=input2.charAt(0);
+		if(Character.isUpperCase(s1))
+			s1=Character.toLowerCase(s1);
+		else
+		{s1=Character.toUpperCase(s1);}
+		s=s+Character.toString(s1);
+			for(int i=0;i<input1.length();i++){
+			char s2=input1.charAt(i);
+			if(Character.isUpperCase(s2))
+			s2=Character.toLowerCase(s2);
+		else
+		{s2=Character.toUpperCase(s2);}
+			s=s+Character.toString(s2);
+		}
+	}else if(input1.length()==input2.length()){
+		int j=in1.compareTo(in2);
+		if(j>0)
+		{
+			char s1=input2.charAt(0);
+		if(Character.isUpperCase(s1))
+			s1=Character.toLowerCase(s1);
+		else
+		{s1=Character.toUpperCase(s1);}
+		s=s+Character.toString(s1);
+			for(int i=0;i<input1.length();i++){
+			char s2=input1.charAt(i);
+			if(Character.isUpperCase(s2))
+			s2=Character.toLowerCase(s2);
+		else
+		{s2=Character.toUpperCase(s2);}
+			s=s+Character.toString(s2);
+		}
+		}
+		else
+		{
+			char s1=input1.charAt(0);
+		if(Character.isUpperCase(s1))
+			s1=Character.toLowerCase(s1);
+		else
+		{s1=Character.toUpperCase(s1);}
+		s=s+Character.toString(s1);
+		for(int i=0;i<input2.length();i++){
+			char s2=input2.charAt(i);
+			if(Character.isUpperCase(s2))
+			s2=Character.toLowerCase(s2);
+		else
+		{s2=Character.toUpperCase(s2);}
+			s=s+Character.toString(s2);
+		}
+		}
+	}String s3=Integer.toString(input3);
+		s=s+(Character.toString(s3.charAt(input4-1)));
+		s=s+(Character.toString(s3.charAt(s3.length()-input4)));
+		return s;
+	}
+}
