@@ -1,0 +1,27 @@
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public int sumOfNonPrimeIndexValues(int[] input1,int input2){
+		// Read only region end
+		int r=0,j=0;
+		for(int i=0;i<input1.length;i++)
+		{
+			if(i==0||i==1)
+				r+=input1[i];
+			else if(i!=2){
+				for(j=2;j<i;j++){
+					if((i%j)==0)
+						break;
+				}if(i!=j)
+				{r+=input1[i];}
+			}
+		}return r;
+		
+	}
+}
+/*input1[]={-1,-2,3,4,-7}
+output=1*/
