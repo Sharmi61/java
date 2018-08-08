@@ -38,3 +38,4 @@ System.out.println(u.digitRemove_Palin(252532));
 			
 		
 	}
+//remove 3 from the num 252532 to get palindrome
