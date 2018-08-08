@@ -1,0 +1,49 @@
+import java.io.*;
+import  java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+
+	public int findPassword(int input1,int input2,int input3,int input4,int input5){
+		// Read only region end
+String i1=Integer.toString(input1);
+		String i2=Integer.toString(input2);
+		 String i3=Integer.toString(input3);
+		String i4=Integer.toString(input4);
+		 String i5=Integer.toString(input5);
+		String[] s1={i1,i2,i3,i4,i5};
+	ArrayList<Integer> st=new ArrayList<Integer>();
+	ArrayList<Integer> ust=new ArrayList<Integer>();
+		ArrayList<Integer> al=new ArrayList<Integer>();
+		ArrayList<Integer> fr=new ArrayList<Integer>();
+	for(int i=0;i<s1.length;i++){
+		
+		for(int j=0;j<s1[i].length();j++){
+			al.add(Integer.parseInt(Character.toString(s1[i].charAt(j))));
+		}
+		for(int q=0;q<al.size();q++)
+			fr.add(Collections.frequency(al,al.get(q)));
+	int m=Collections.max(fr);
+		int r=0;
+	for(r=0;r<fr.size();r++)
+	{if(fr.get(r)!=m)
+			break;}
+	if(r==fr.size())
+		st.add(Integer.parseInt(s1[i]));
+    else
+		ust.add(Integer.parseInt(s1[i]));
+	al.clear();
+		fr.clear();	
+	}
+int p=0;
+	for(int i=0;i<st.size();i++)
+		p+=st.get(i);
+		int p1=0;
+	for(int i=0;i<ust.size();i++)
+		p1+=ust.get(i);
+		p=p-p1;
+    return p;
+		
+	}
+}
