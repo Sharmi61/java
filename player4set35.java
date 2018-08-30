@@ -23,7 +23,7 @@ public class player4set35 {
 		for(int i=0;i<al.size();i++)
 		{
 			if(al2.get(i)==m)
-				System.out.print(al.get(i)+" ");
+				System.out.print(al1.get(i)+" ");
 		}
 	}
 
