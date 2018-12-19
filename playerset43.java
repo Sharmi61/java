@@ -10,12 +10,12 @@ if(a>=0)
 System.out.println(a);
 else
 System.out.println(a);
-int b=s1.lastIndexOf(s2);//tells the first occurance
+int b=s1.IndexOf(s2);//tells the first occurance
 if(b>=0)
 System.out.println(b);
 else
 System.out.println(b);*/
-if(s1.contains(s1))
+if(s1.contains(s2))
 System.out.println("yes");
 else
 System.out.println("no");
