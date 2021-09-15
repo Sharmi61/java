@@ -24,4 +24,4 @@ class UserMainCode
 	}
 }
 /*input1[]={-1,-2,3,4,-7}
-output=1*/
+output=-10*/
